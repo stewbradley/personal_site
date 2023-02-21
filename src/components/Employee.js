@@ -9,19 +9,16 @@ function Employee(props) {
             src={props.img} 
             alt="Face"/>
         <div className="text-center space-y-2 sm:text-left">
-        <div className="space-y-0.5">
-            <p className="text-lg text-whi font-semibold">
-                {props.name}
-            </p>
-            <p className="text-slate-500 font-medium">
-                {props.role}
-            </p>
-        </div>
-        
-        <EditEmployee 
-            name={props.name} 
-            role={props.role}
-        />
+            <div className="space-y-0.5">
+                <p className="text-lg text-whi font-semibold">
+                    {props.name}
+                </p>
+                <p className="text-slate-500 font-medium">
+                    {props.role}
+                </p>
+            </div>
+
+            {props.editEmployee}
 
         </div>
     </div>
