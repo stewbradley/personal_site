@@ -3,6 +3,7 @@ import Employees from './pages/Employees';
 import Header from './components/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contributors from './pages/Contributors';
+import Dictionary from './components/Dictionary';
 // useState is an example of Hook. When things start with use, they are hooks
 // hooks allow us to use state in functional components, without writing a class
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Header> 
             <Routes>
                 <Route path='/employees' element={<Employees />} />
+                <Route path='/dictionary' element={<Dictionary />} />
                 <Route path='/contributors' element={<Contributors />} /> 
             </Routes>
         </Header> 

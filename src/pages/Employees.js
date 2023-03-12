@@ -2,7 +2,6 @@ import '../index.css';
 import Employee from "../components/Employee";
 import { useState } from "react"; 
 import {v4 as uuidv4} from 'uuid';
-import Header from '../components/Header';
 import AddEmployee from '../components/AddEmployee';
 import EditEmployee from '../components/EditEmployee';
 // useState is an example of Hook. When things start with use, they are hooks
@@ -86,10 +85,9 @@ function Employees() {
   const showEmployees = true;
   return (
     <div className= "App bg-gray-500 min-h-screen" >
-      <Header />
         {showEmployees ? (
           <>
-            <div className="flex flex-wrap justify-center my-2">
+            <div className="flex flex-wrap justify-center py-2">
               {employees.map((employee) => {
                 const editEmployee = ( 
                   <EditEmployee 
@@ -108,7 +106,7 @@ function Employees() {
                 );
               })}
             </div>
-            <div className="border-amber-200 flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center">
               <AddEmployee newEmployee={newEmployee} /> 
             </div>
           </> 
