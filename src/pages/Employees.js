@@ -84,7 +84,7 @@ function Employees() {
     }
   const showEmployees = true;
   return (
-    <div className= "App bg-gray-500 min-h-screen" >
+    <div className= "App min-h-screen" >
         {showEmployees ? (
           <>
             <div className="flex flex-wrap justify-center py-2">
