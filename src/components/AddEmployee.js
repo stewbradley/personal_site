@@ -102,7 +102,7 @@ function AddEmployee(props) {
         </Modal.Body>
         <Modal.Footer>
           <button 
-            className="bg-slate-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
+            className="font-mono text-sm border-solid hover:border-double hover:bg-green-300 bg-slate-300 border-2 rounded px-2 border-zinc-500" // bg-slate-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
             onClick={handleClose}
           >
             Close

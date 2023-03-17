@@ -3,12 +3,17 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function EditEmployee(props) {
+  const [show, setShow] = useState(false);
   const [name, setName] = useState(props.name);
   const [role, setRole] = useState(props.role);
   
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {handleClose();
+    }
+  };
 
   return (
     <>
@@ -51,7 +56,10 @@ function EditEmployee(props) {
                   id="name" 
                   type="text" 
                   value={name}
-                  onChange={(e) => {setName(e.target.value)}}
+                  onChange={(e) => {
+                    setName(e.target.value)
+                  }}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
@@ -70,7 +78,8 @@ function EditEmployee(props) {
                   id="role" 
                   type="text" 
                   value={role}
-                  onChange={(e) => {setRole(e.target.value)}} />
+                  onChange={(e) => {setRole(e.target.value)}}
+                  onKeyDown={handleKeyPress} />
               </div>
             </div>
            
@@ -80,6 +89,7 @@ function EditEmployee(props) {
           <button 
             className="bg-slate-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
             onClick={handleClose}
+            onKeyDown={handleKeyPress}
           >
             Close
           </button>
